@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 include("add_configuration.cmake")
 include("add_subdirectory_if_exists.cmake")
 
-project(rtg)
+project(cg1)
 
 add_configuration(Submission Release)
 
