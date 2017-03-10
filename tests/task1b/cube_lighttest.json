@@ -1,0 +1,58 @@
+{
+	"test":
+	{
+		"name": "cube_lighttest",
+		"output": "output/task1b/cube_lighttest",
+		"output_intermediates": true,
+		"width": 800,
+		"height": 600,
+		"camera":
+		{
+			"eye": [ 7.4811, -6, 5.3],
+			"lookat": [ 0, 0.2, 0],
+			"up": [ 0, 1, 0 ],
+			"f": 0.1, 
+			"beta": 20
+		},
+		"image_plane":
+		{
+			"a" : [-0.0731206, 0.0706002, -0.0230261],
+			"b" : [7.4811, -6, 5.3],
+			"c" : [3.39771e-005, 0, -4.79597e-005],
+			"d" : [-2.68662e-005, -4.8688e-005, -1.90334e-005]
+		},
+		"scene" :
+		{
+			"lights" : 
+			[
+				{
+					"position" : [10, -10, 0],
+					"color" : [0.0, 0.0, 1.0]
+				},
+				{
+					"position" : [10, 0, 10],
+					"color" : [0.0, 1.0, 0.0]
+				},
+				{
+					"position" : [0, -10, 10],
+					"color" : [1.0, 0.0, 0.0]
+				}
+			],
+			"materials" :
+			[
+				{
+					"name" : "cube",
+					"shininess" : 8,
+					"k_d" : [0.8, 0.8, 0.8],
+					"k_s" : [0.6, 0.6, 0.6]
+				}
+			],
+			"objects": 
+			[ 
+				{ 
+					"src": "data/task1b/cube.obj"
+				}
+			]
+		}
+	}
+}

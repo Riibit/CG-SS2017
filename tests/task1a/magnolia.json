@@ -1,0 +1,22 @@
+{
+	"test":
+	{
+		"name": "magnolia",
+		"output": "output/task1a/magnolia",
+		"width": 512,
+		"height": 512,
+		"camera":
+		{
+			"eye": [ 0, 90, 60 ],
+			"lookat": [ 0, -40, 0.0 ],
+			"up": [ 1, 1, 0 ],
+			"f": 0.1, 
+			"beta": 80
+		},
+		"viewBox":  [ 90, 200 ],
+		"scene": 
+		{
+			"objects": [ { "src": "data/task1a/magnolia.obj"} ]
+		}
+	}
+}

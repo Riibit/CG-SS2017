@@ -1,0 +1,58 @@
+{
+	"test":
+	{
+		"name": "cr90",
+		"output": "output/task1b/cr90",
+		"output_intermediates": true,
+		"width": 1920,
+		"height": 1080,
+		"camera":
+		{
+			"eye": [ 60, 30, 30],
+			"lookat": [ 0, 0, 0],
+			"up": [ 0, 1, 0 ],
+			"f": 1, 
+			"beta": 60
+		},
+		"image_plane":
+		{
+			"a" : [-1.4859, 0.11831, 0.404002],
+			"b" : [60, 30, 30],
+			"c" : [0.000478146, 0, -0.000956292],
+			"d" : [0.000390405, -0.000976012, 0.000195202]
+		},
+		"scene" :
+		{
+			"background" : [0.3, 0.3, 0.3],
+			"lights" : 
+			[
+				{
+					"position" : [1000, 800, -300],
+					"color" : [1.0, 1.0, 1.0]
+				},
+				{
+					"position" : [-600, 400, 800],
+					"color" : [0.1, 0.5, 0.6]
+				},
+				{
+					"position" : [600, 300, 300],
+					"color" : [0.3, 0.2, 0.1]
+				}
+			],
+			"materials" :
+			[
+				{
+					"name" : "cr90",
+					"texture" : "./data/task1b/cr90_D.png",
+					"k_d" : [0.8, 0.8, 0.8]
+				}
+			],
+			"objects": 
+			[ 
+				{ 
+					"src": "data/task1b/cr90.obj"
+				}
+			]
+		}
+	}
+}

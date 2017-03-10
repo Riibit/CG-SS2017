@@ -1,0 +1,22 @@
+{
+	"test":
+	{
+		"name": "vader2",
+		"output": "output/task1a/vader2",
+		"width": 400,
+		"height": 300,
+		"camera":
+		{
+			"eye": [ -3, 2, 12 ],
+			"lookat": [ 0, 0, 0 ],
+			"up": [ 0, 1, 0 ],
+			"f": 1, 
+			"beta": 45
+		},
+		"viewBox":  [ 10, 19 ],
+		"scene": 
+		{
+			"objects": [ { "src": "data/task1a/vader.obj"} ]
+		}
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"test":
+	{
+		"name": "vader",
+		"output": "output/task1b/vader",
+		"output_intermediates": true,
+		"width": 800,
+		"height": 600,
+		"camera":
+		{
+			"eye": [ 3, 2, 9 ],
+			"lookat": [ 0, 0, 0 ],
+			"up": [ 0, 1, 0 ],
+			"f": 1, 
+			"beta": 45
+		},
+		"image_plane":
+		{
+			"a" : [-0.85969, 0.198345, -0.834775],
+			"b" : [3, 2, 9],
+			"c" : [0.00130986, 0, -0.000436619],
+			"d" : [9.00677e-005, -0.00135102, 0.000270203]
+		},
+		"scene" :
+		{
+			"background" : [0.3, 0.3, 0.3],
+			"lights" : 
+			[
+				{
+					"position" : [-4, 5, 9],
+					"color" : [0.2, 0.2, 1.0]
+				},
+				{
+					"position" : [4, 5, 9],
+					"color" : [1.0, 0.2, 0.2]
+				},
+				{
+					"position" : [0, 5, 9],
+					"color" : [0.2, 1.0, 0.2]
+				}
+			],
+			"materials" :
+			[
+				{
+					"name" : "vader",
+					"shininess" : 25,
+					"k_s" : [0.7, 0.7, 1],
+					"texture" : "./data/task1b/vader.png"
+				}
+			],
+			"objects": [ { "src": "data/task1b/vader.obj"} ]
+		}
+	}
+}

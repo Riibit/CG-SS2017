@@ -1,0 +1,91 @@
+{
+	"test":
+	{
+		"name": "reflecting_sphere",
+		"output": "output/task1b/reflecting_sphere",
+		"output_intermediates": true,
+		"max_bounce" : 1,
+		"width": 1024,
+		"height": 1024,
+		"camera":
+		{
+			"eye": [ 2, 3, 6],
+			"lookat": [ 0, 2, 1 ],
+			"up": [ 0, 1, 0 ],
+			"f": 0.1, 
+			"beta": 60
+		},
+		"image_plane":
+		{
+			"a" : [-0.0939791, 0.0384518, -0.0796432],
+			"b" : [2, 3, 6],
+			"c" : [0.000104698, 0, -4.18794e-005],
+			"d" : [7.6461e-006, -0.000110868, 1.91152e-005]
+		},
+		"scene" :
+		{
+			"lights" : 
+			[
+				{
+					"position" : [-0.5, 3.8, -0.5],
+					"color" : [0.2, 0.2, 0.2]
+				},
+				{
+					"position" : [0.5, 3.8, -0.5],
+					"color" : [0.2, 0.2, 0.2]
+				},
+				{
+					"position" : [-0.5, 3.8, 0.5],
+					"color" : [0.2, 0.2, 0.2]
+				},
+				{
+					"position" : [0.5, 3.8, 0.5],
+					"color" : [0.2, 0.2, 0.2]
+				},
+				{
+					"position" : [0, 3.8, 0],
+					"color" : [0.2, 0.2, 0.2]
+				}
+			],
+			"materials" :
+			[
+				{
+					"name" : "cornell_bottom",
+					"k_d" : [0.7, 0.7, 0.7]
+				},
+				{
+					"name" : "cornell_top",
+					"k_d" : [0.7, 0.7, 0.7]
+				},
+				{
+					"name" : "cornell_left",
+					"texture" : "./data/task1b/logo.png"
+				},
+				{
+					"name" : "cornell_back",
+					"k_d" : [0.7, 0.7, 0.7]
+				},
+				{
+					"name" : "cornell_right",
+					"texture" : "./data/task1b/logo.png"
+				},
+				{
+					"name" : "sphere",
+					"k_s" : [0.7, 0.7, 0.7],
+					"reflection" : true
+				}
+			],
+			"objects": 
+			[ 
+				{ 
+					"src": "data/task1b/cornell_box.obj", 
+					"transform": [2.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0]
+				},
+				{
+					"src": "data/task1b/sphere.obj",
+					"transform" : [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.5, 0.0, 0.0, 1.0, 0.0]
+				}
+			]
+		}
+	}
+}

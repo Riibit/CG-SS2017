@@ -1,0 +1,53 @@
+{
+	"test":
+	{
+		"name": "xwing",
+		"output": "output/task1b/xwing",
+		"output_intermediates": true,
+		"width": 1920,
+		"height": 1080,
+		"camera":
+		{
+			"eye": [ 28, 14, 14 ],
+			"lookat": [ 0, -5, 0 ],
+			"up": [ 0, 1, 0 ],
+			"f": 1, 
+			"beta": 60
+		},
+		"image_plane":
+		{
+			"a" : [-1.49108, -0.0257461, 0.401412],
+			"b" : [28, 14, 14],
+			"c" : [0.000478146, 0, -0.000956292],
+			"d" : [0.000496169, -0.000913996, 0.000248085]
+		},
+		"scene" :
+		{
+			"background" : [0.3, 0.3, 0.3],
+			"lights" : 
+			[
+				{
+					"position" : [1000, 800, -300],
+					"color" : [1.0, 1.0, 1.0]
+				},
+				{
+					"position" : [-600, 400, 800],
+					"color" : [0.1, 0.5, 0.6]
+				},
+				{
+					"position" : [600, 300, 300],
+					"color" : [0.3, 0.2, 0.1]
+				}
+			],
+			"materials" :
+			[
+				{
+					"name" : "xwing",
+					"k_d" : [0.8, 0.8, 0.8],
+					"texture" : "./data/task1b/xwing_D.png"
+				}
+			],
+			"objects": [ { "src": "data/task1b/xwing.obj"} ]
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"test":
+	{
+		"name": "cube5",
+		"output": "output/task1a/cube5",
+		"width": 400,
+		"height": 600,
+		"camera":
+		{
+			"eye": [ 7.4811, -6, 5.3 ],
+			"lookat": [ 0, 0.2, 0 ],
+			"up": [ 0, 1, 0],
+			"f": 0.1, 
+			"beta": 20
+		},
+		"viewBox":  [ 9, 12 ],
+		"scene": 
+		{
+			"objects": [ { "src": "data/task1a/cube.obj"} ]
+		}
+	}
+}

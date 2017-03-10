@@ -1,0 +1,78 @@
+{
+	"test":
+	{
+		"name": "two_mirrors_damped",
+		"output": "output/task1b/two_mirrors_damped",
+		"max_bounce" : 9,
+		"output_intermediates": true,
+		"width": 2048,
+		"height": 2048,
+		"camera":
+		{
+			"eye": [ 0, 1, 0 ],
+			"lookat": [ -1, 1, 0 ],
+			"up": [ 0, 1, 0 ],
+			"f": 0.1, 
+			"beta": 120
+		},
+		"image_plane":
+		{
+			"a" : [-0.1, 0.173121, 0.173121],
+			"b" : [0, 1, 0],
+			"c" : [0, 0, -0.000169146],
+			"d" : [0, -0.000169146, -0]
+		},
+		"scene" :
+		{
+			"lights" : 
+			[
+				{
+					"position" : [0, 1.8, 0],
+					"color" : [1.0, 1.0, 1.0]
+				}
+			],
+			"materials" :
+			[
+				{
+					"name" : "cornell_bottom",
+					"k_d" : [0.7, 0.7, 0.7]
+				},
+				{
+					"name" : "cornell_top",
+					"k_d" : [0.0, 0.8, 0.0]
+				},
+				{
+					"name" : "cornell_left",
+					"reflection" : true,
+					"k_d" : [0.5, 0.5, 0.5],
+					"k_s" : [0.5, 0.5, 0.5]
+				},
+				{
+					"name" : "cornell_back",
+					"k_d" : [0.0, 0.0, 0.8]
+				},
+				{
+					"name" : "cornell_right",
+					"reflection" : true,
+					"k_d" : [0.5, 0.5, 0.5],
+					"k_s" : [0.5, 0.5, 0.5]
+				},
+				{
+					"name" : "vader",
+					"texture" : "./data/task1b/vader.png"
+				}
+			],
+			"objects": 
+			[ 
+				{ 
+					"src" : "data/task1b/vader.obj",
+					"transform" : [-0.2, 0.0, 0.0, 0.0, 0.0, 0.2, 0.0, 1.0, 0.0, 0.0, -0.2, 1.0]
+				},
+				{ 
+					"src" : "data/task1b/cornell_box.obj",
+					"transform" : [2.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0]
+				} 
+			]
+		}
+	}
+}

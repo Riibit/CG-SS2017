@@ -1,0 +1,68 @@
+{
+	"test":
+	{
+		"name": "shadow_test",
+		"output": "output/task1b/shadow_test",
+		"output_intermediates": true,
+		"width": 800,
+		"height": 600,
+		"camera":
+		{
+			"eye": [ 0, 3, 4 ],
+			"lookat": [ 0, 0, 0 ],
+			"up": [ 0, 1, 0 ],
+			"f": 0.1, 
+			"beta": 60
+		},
+		"image_plane":
+		{
+			"a" : [-0.0768838, -0.013889, -0.114583],
+			"b" : [0, 3, 4],
+			"c" : [0.00019245, 0, 0],
+			"d" : [-0, -0.00015396, 0.00011547]
+		},
+		"scene" :
+		{
+			"background" : [0.3, 0.3, 0.3],
+			"lights" : 
+			[
+				{
+					"position" : [5, 5, 5],
+					"color" : [0.3, 0.3, 0.3]
+				},
+				{
+					"position" : [15, 20, -30],
+					"color" : [1.0, 1.0, 1.0]
+				}
+			],
+			"materials" :
+			[
+				{
+					"name" : "tu_black",
+					"k_d" : [0.1, 0.1, 0.1],
+					"k_s" : [0.7, 0.7, 0.7],
+					"shininess" : 16
+				},
+				{
+					"name" : "tu_red",
+					"k_d" : [0.8, 0.0, 0.2]
+				},
+				{
+					"name" : "plane",
+					"k_d" : [0.6, 0.6, 0.6],
+					"k_s" : [0.0, 0.0, 0.0]
+				}
+			],
+			"objects": 
+			[ 
+				{ 
+					"src": "data/task1b/tu.obj", 
+					"transform": [-1.0, 0.0, 0.0, 1.0, 0.0, -1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0]
+				},
+				{
+					"src": "data/task1b/plane.obj"
+				}
+			]
+		}
+	}
+}
