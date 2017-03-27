@@ -1,0 +1,35 @@
+image: icgoperations/icg-cg-dockerimage
+
+stages:
+  - build
+  - test
+
+linux-build-task1a:
+  stage: build
+  script:
+    - cd build
+    - cmake ./cmake
+    - make
+  tags:
+    - docker,shared
+  only:
+    - /^task1a.*$/
+  artifacts:
+    paths:
+      - build/task1a/task1a
+    expire_in: 2 h
+
+linux-test-task1a:
+  stage: test
+  script:
+    - build/task1a/task1a tests/task1a/cube.json
+  tags:
+    - docker,shared
+  only:
+    - /^task1a.*$/
+  dependencies:
+    - linux-build-task1a
+  artifacts:
+    paths:
+      - output/task1a/cube/output.png
+    expire_in: 2 d
