@@ -9,14 +9,29 @@ linux-build-task1a:
   script:
     - cd build
     - cmake ./cmake
-    - make
+    - make task1a
   tags:
     - docker,shared
   only:
-    - /^task1a.*$/
+    - task1a-submission
   artifacts:
     paths:
       - build/task1a/task1a
+    expire_in: 2 h
+
+linux-build-task1b:
+  stage: build
+  script:
+    - cd build
+    - cmake ./cmake
+    - make task1b
+  tags:
+    - docker,shared
+  only:
+    - task1b-submission
+  artifacts:
+    paths:
+      - build/task1b/task1b
     expire_in: 2 h
 
 linux-test-task1a:
@@ -26,10 +41,25 @@ linux-test-task1a:
   tags:
     - docker,shared
   only:
-    - /^task1a.*$/
+    - task1a-submission
   dependencies:
     - linux-build-task1a
   artifacts:
     paths:
       - output/task1a/cube/output.png
+    expire_in: 2 d
+
+linux-test-task1b:
+  stage: test
+  script:
+    - build/task1b/task1b tests/task1b/cube_textured.json
+  tags:
+    - docker,shared
+  only:
+    - task1b-submission
+  dependencies:
+    - linux-build-task1b
+  artifacts:
+    paths:
+      - output/task1b/cube_textured/*.png
     expire_in: 2 d
